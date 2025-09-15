@@ -1,4 +1,4 @@
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import { useEffect } from "react";
 
 const NotFound = () => {
@@ -9,13 +9,25 @@ const NotFound = () => {
   }, [location.pathname]);
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">404</h1>
-        <p className="mb-4 text-xl text-gray-600">Oops! Page not found</p>
-        <a href="/" className="text-blue-500 underline hover:text-blue-700">
-          Return to Home
-        </a>
+    <div className="min-h-screen flex items-center justify-center bg-background">
+      <div className="text-center max-w-md mx-auto px-4">
+        <div className="text-8xl font-bold neon-text mb-4 animate-bounce-in">404</div>
+        <h1 className="text-3xl font-bold mb-4">Oops! Page not found</h1>
+        <p className="text-muted-foreground mb-8 leading-relaxed">
+          Looks like this page got lost in the financial universe. 
+          Let's get you back to saving money and earning XP!
+        </p>
+        <div className="space-y-4">
+          <Link to="/" className="btn-hero inline-block px-8 py-3 rounded-xl font-semibold">
+            Return to Home
+          </Link>
+          <div className="text-sm text-muted-foreground">
+            Or explore our{' '}
+            <Link to="/features" className="text-primary hover:underline">features</Link>,{' '}
+            <Link to="/about" className="text-primary hover:underline">about us</Link>, or{' '}
+            <Link to="/contact" className="text-primary hover:underline">get in touch</Link>
+          </div>
+        </div>
       </div>
     </div>
   );
