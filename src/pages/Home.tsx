@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { ArrowRight, Trophy, Target, Zap, Users, TrendingUp, Star } from 'lucide-react';
+import { ArrowRight, Zap } from 'lucide-react';
 import heroImage from '@/assets/hero-finx.jpg';
 
 const Home = () => {
