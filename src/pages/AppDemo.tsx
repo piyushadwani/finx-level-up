@@ -3,7 +3,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { Apple, Smartphone, Star, Users, Trophy, Zap, Flame, Gift, Plus, Check } from 'lucide-react';
+import { Apple, Smartphone, Flame, Gift, Plus, Check } from 'lucide-react';
 
 const EXPENSE_CATEGORIES = [
   { emoji: '🍔', label: 'Food' },
@@ -23,11 +23,11 @@ const FRIENDS_STREAKS = [
 ];
 
 const MILESTONE_REWARDS = [
-  { day: 100, reward: '🎟️ ₹500 Amazon Voucher', unlocked: true },
-  { day: 200, reward: '🎫 ₹1000 Swiggy Coupon', unlocked: true },
-  { day: 300, reward: '🏆 ₹2000 Flipkart Voucher', unlocked: true },
-  { day: 400, reward: '💎 Premium Membership (1 Month)', unlocked: false },
-  { day: 500, reward: '🚀 ₹5000 Cash Reward', unlocked: false },
+  { day: 100, reward: '🎟️ ₹50 Amazon Voucher', unlocked: true },
+  { day: 200, reward: '🎫 ₹100 Swiggy Coupon', unlocked: true },
+  { day: 300, reward: '🏆 ₹200 Flipkart Voucher', unlocked: true },
+  { day: 400, reward: '💎 ₹300 Zomato Coupon', unlocked: false },
+  { day: 500, reward: '🚀 ₹500 Cash Reward', unlocked: false },
 ];
 
 const AppDemo = () => {
@@ -288,31 +288,6 @@ const AppDemo = () => {
           </div>
         </div>
 
-        {/* App Stats */}
-        <div className="mb-20">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              { icon: Star, label: 'App Store Rating', value: '4.8/5', subtext: '12,489 reviews' },
-              { icon: Users, label: 'Active Users', value: '50K+', subtext: 'Growing daily' },
-              { icon: Trophy, label: 'Rewards Claimed', value: '25K+', subtext: 'Vouchers & coupons' },
-              { icon: Zap, label: 'Daily Engagement', value: '85%', subtext: 'Users log daily' },
-            ].map((stat, i) => {
-              const Icon = stat.icon;
-              return (
-                <Card key={stat.label} className="game-card text-center animate-bounce-in" style={{ animationDelay: `${i * 0.1}s` }}>
-                  <CardContent className="p-6">
-                    <div className="inline-flex p-4 rounded-2xl bg-primary/10 mb-4 animate-pulse-glow">
-                      <Icon className="h-8 w-8 text-primary" />
-                    </div>
-                    <div className="text-3xl font-bold text-primary mb-2">{stat.value}</div>
-                    <h3 className="font-semibold text-foreground mb-1">{stat.label}</h3>
-                    <p className="text-sm text-muted-foreground">{stat.subtext}</p>
-                  </CardContent>
-                </Card>
-              );
-            })}
-          </div>
-        </div>
 
         {/* Download Section */}
         <div className="text-center bg-gradient-to-br from-primary/10 via-secondary/10 to-accent/10 rounded-2xl p-12">

@@ -12,7 +12,7 @@ const Navigation = () => {
     { name: 'Features', href: '/features' },
     { name: 'About', href: '/about' },
     { name: 'App Demo', href: '/demo' },
-    { name: 'Contact', href: '/contact' },
+    
   ];
 
   const isActive = (path: string) => location.pathname === path;
