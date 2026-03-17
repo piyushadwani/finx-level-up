@@ -5,47 +5,26 @@ import { Heart, Users, Target, Zap, Linkedin, Twitter, Github } from 'lucide-rea
 const About = () => {
   const teamMembers = [
     {
-      name: 'Alex Chen',
+      name: 'Piyush Adwani',
       role: 'CEO & Co-Founder',
-      bio: 'Former fintech VP who saw the need for Gen Z financial wellness.',
+      bio: 'Visionary leader driving FinX to make financial wellness fun for Gen Z.',
       image: '👨‍💼',
-      socials: { linkedin: '#', twitter: '#' }
-    },
-    {
-      name: 'Maya Patel',
-      role: 'CTO & Co-Founder',
-      bio: 'Ex-Google engineer passionate about gamification and user experience.',
-      image: '👩‍💻',
-      socials: { linkedin: '#', github: '#' }
-    },
-    {
-      name: 'Jordan Williams',
-      role: 'Head of Product',
-      bio: 'Gaming industry veteran bringing fun to financial technology.',
-      image: '👨‍🎨',
-      socials: { linkedin: '#', twitter: '#' }
-    },
-    {
-      name: 'Zara Kim',
-      role: 'Head of Marketing',
-      bio: 'Gen Z advocate and social media expert connecting with our community.',
-      image: '👩‍🚀',
-      socials: { linkedin: '#', twitter: '#' }
-    },
-    {
-      name: 'Sam Rodriguez',
-      role: 'Financial Advisor',
-      bio: 'Certified financial planner ensuring our gamification promotes real wealth building.',
-      image: '👨‍🏫',
       socials: { linkedin: '#' }
     },
     {
-      name: 'Taylor Johnson',
-      role: 'UX Designer',
-      bio: 'Design thinking expert creating intuitive and engaging user experiences.',
-      image: '👩‍🎨',
-      socials: { linkedin: '#', twitter: '#' }
-    }
+      name: 'Apoorv Joshi',
+      role: 'CFO & Co-Founder',
+      bio: 'Financial strategist ensuring sustainable growth and smart money management.',
+      image: '👨‍💻',
+      socials: { linkedin: '#' }
+    },
+    {
+      name: 'Aditya Gaikwad',
+      role: 'MD & Co-Founder',
+      bio: 'Operations expert building the backbone of the FinX platform.',
+      image: '👨‍🎨',
+      socials: { linkedin: '#' }
+    },
   ];
 
   const values = [
