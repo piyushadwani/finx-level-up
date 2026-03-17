@@ -183,38 +183,6 @@ const About = () => {
           </div>
         </div>
 
-        {/* Story Section */}
-        <div className="mb-20">
-          <Card className="game-card bg-gradient-to-br from-primary/5 via-secondary/5 to-accent/5">
-            <CardContent className="p-12 text-center">
-              <h2 className="text-3xl md:text-4xl font-bold mb-8">
-                Our <span className="neon-text">Story</span>
-              </h2>
-              <div className="max-w-4xl mx-auto space-y-6 text-lg text-muted-foreground leading-relaxed">
-                <p>
-                  FinX was born from a simple observation: our generation is great at leveling up in games 
-                  but struggles with leveling up financially. We spend hours grinding for XP and achievements 
-                  in virtual worlds, but when it comes to real money, we're often overwhelmed or disengaged.
-                </p>
-                <p>
-                  Our founders, Alex and Maya, met at a fintech conference where they were discussing this exact problem. 
-                  Alex, coming from traditional banking, saw how existing financial products failed to connect with younger users. 
-                  Maya, with her gaming background, knew exactly how to make complex systems engaging and fun.
-                </p>
-                <p>
-                  Together, they assembled a team of gaming veterans, financial experts, and Gen Z advocates to create 
-                  something entirely new: a savings platform that feels like your favorite mobile game, but actually 
-                  builds real wealth in your life.
-                </p>
-                <p className="text-primary font-semibold">
-                  Today, FinX is trusted by over 50,000 users who have collectively saved more than $2 million 
-                  while having fun doing it.
-                </p>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
-
         {/* CTA Section */}
         <div className="text-center">
           <h3 className="text-3xl font-bold mb-6">

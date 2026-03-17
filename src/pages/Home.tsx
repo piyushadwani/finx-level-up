@@ -76,7 +76,7 @@ const Home = () => {
             <div className="mb-8 max-w-md mx-auto">
               <div className="flex justify-between text-sm text-muted-foreground mb-2">
                 <span>Savings Progress</span>
-                <span>$750 / $1,000</span>
+                <span>₹750 / ₹1,000</span>
               </div>
               <div className="progress-bar">
                 <div className="progress-fill" style={{width: '75%'}} />
