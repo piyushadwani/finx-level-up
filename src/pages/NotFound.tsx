@@ -24,8 +24,7 @@ const NotFound = () => {
           <div className="text-sm text-muted-foreground">
             Or explore our{' '}
             <Link to="/features" className="text-primary hover:underline">features</Link>,{' '}
-            <Link to="/about" className="text-primary hover:underline">about us</Link>, or{' '}
-            <Link to="/contact" className="text-primary hover:underline">get in touch</Link>
+             <Link to="/about" className="text-primary hover:underline">about us</Link>
           </div>
         </div>
       </div>
