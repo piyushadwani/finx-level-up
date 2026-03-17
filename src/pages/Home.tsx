@@ -115,29 +115,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-16 bg-gradient-to-r from-primary/5 via-secondary/5 to-accent/5">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-            {stats.map((stat, index) => {
-              const Icon = stat.icon;
-              return (
-                <div key={stat.label} className="text-center animate-bounce-in" style={{animationDelay: `${index * 0.1}s`}}>
-                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-background/50 backdrop-blur-sm border border-primary/20 mb-4 animate-pulse-glow">
-                    <Icon className={`h-8 w-8 ${stat.color}`} />
-                  </div>
-                  <div className={`text-3xl font-bold ${stat.color} mb-2`}>
-                    {stat.value}
-                  </div>
-                  <div className="text-muted-foreground font-medium">
-                    {stat.label}
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
 
       {/* Benefits Section */}
       <section className="py-20">
