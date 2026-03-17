@@ -1,6 +1,6 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Heart, Users, Target, Zap, Linkedin, Twitter, Github } from 'lucide-react';
+import { Heart, Users, Target, Zap, Linkedin } from 'lucide-react';
 
 const About = () => {
   const teamMembers = [
