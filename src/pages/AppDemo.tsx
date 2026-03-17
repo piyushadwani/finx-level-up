@@ -23,11 +23,11 @@ const FRIENDS_STREAKS = [
 ];
 
 const MILESTONE_REWARDS = [
-  { day: 100, reward: '🎟️ ₹500 Amazon Voucher', unlocked: true },
-  { day: 200, reward: '🎫 ₹1000 Swiggy Coupon', unlocked: true },
-  { day: 300, reward: '🏆 ₹2000 Flipkart Voucher', unlocked: true },
-  { day: 400, reward: '💎 Premium Membership (1 Month)', unlocked: false },
-  { day: 500, reward: '🚀 ₹5000 Cash Reward', unlocked: false },
+  { day: 100, reward: '🎟️ ₹50 Amazon Voucher', unlocked: true },
+  { day: 200, reward: '🎫 ₹100 Swiggy Coupon', unlocked: true },
+  { day: 300, reward: '🏆 ₹200 Flipkart Voucher', unlocked: true },
+  { day: 400, reward: '💎 ₹300 Zomato Coupon', unlocked: false },
+  { day: 500, reward: '🚀 ₹500 Cash Reward', unlocked: false },
 ];
 
 const AppDemo = () => {
