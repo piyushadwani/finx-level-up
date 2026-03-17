@@ -8,7 +8,7 @@ import Home from "./pages/Home";
 import Features from "./pages/Features";
 import About from "./pages/About";
 import AppDemo from "./pages/AppDemo";
-import Contact from "./pages/Contact";
+
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
