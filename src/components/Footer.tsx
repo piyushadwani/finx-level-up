@@ -9,7 +9,7 @@ const Footer = () => {
     { name: 'Features', href: '/features' },
     { name: 'About', href: '/about' },
     { name: 'App Demo', href: '/demo' },
-    { name: 'Contact', href: '/contact' },
+    
   ];
 
   const legalLinks = [
