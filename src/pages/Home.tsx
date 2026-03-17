@@ -4,12 +4,6 @@ import { ArrowRight, Zap } from 'lucide-react';
 import heroImage from '@/assets/hero-finx.jpg';
 
 const Home = () => {
-  const stats = [
-    { icon: Users, label: 'Active Users', value: '50K+', color: 'text-primary' },
-    { icon: Trophy, label: 'Goals Achieved', value: '100K+', color: 'text-secondary' },
-    { icon: TrendingUp, label: 'Money Saved', value: '$2M+', color: 'text-accent' },
-    { icon: Star, label: 'App Rating', value: '4.8/5', color: 'text-primary' },
-  ];
 
   const benefits = [
     {
