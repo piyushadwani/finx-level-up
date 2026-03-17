@@ -3,7 +3,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { Apple, Smartphone, Star, Users, Trophy, Zap, Flame, Gift, Plus, Check } from 'lucide-react';
+import { Apple, Smartphone, Flame, Gift, Plus, Check } from 'lucide-react';
 
 const EXPENSE_CATEGORIES = [
   { emoji: '🍔', label: 'Food' },
