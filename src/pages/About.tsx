@@ -166,16 +166,6 @@ const About = () => {
                         <Linkedin className="h-4 w-4" />
                       </a>
                     )}
-                    {member.socials.twitter && (
-                      <a href={member.socials.twitter} className="p-2 rounded-lg bg-secondary/10 text-secondary hover:bg-secondary/20 transition-colors">
-                        <Twitter className="h-4 w-4" />
-                      </a>
-                    )}
-                    {member.socials.github && (
-                      <a href={member.socials.github} className="p-2 rounded-lg bg-accent/10 text-accent hover:bg-accent/20 transition-colors">
-                        <Github className="h-4 w-4" />
-                      </a>
-                    )}
                   </div>
                 </CardContent>
               </Card>
