@@ -1,15 +1,9 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { ArrowRight, Trophy, Target, Zap, Users, TrendingUp, Star } from 'lucide-react';
+import { ArrowRight, Zap } from 'lucide-react';
 import heroImage from '@/assets/hero-finx.jpg';
 
 const Home = () => {
-  const stats = [
-    { icon: Users, label: 'Active Users', value: '50K+', color: 'text-primary' },
-    { icon: Trophy, label: 'Goals Achieved', value: '100K+', color: 'text-secondary' },
-    { icon: TrendingUp, label: 'Money Saved', value: '$2M+', color: 'text-accent' },
-    { icon: Star, label: 'App Rating', value: '4.8/5', color: 'text-primary' },
-  ];
 
   const benefits = [
     {
@@ -115,29 +109,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-16 bg-gradient-to-r from-primary/5 via-secondary/5 to-accent/5">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-            {stats.map((stat, index) => {
-              const Icon = stat.icon;
-              return (
-                <div key={stat.label} className="text-center animate-bounce-in" style={{animationDelay: `${index * 0.1}s`}}>
-                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-background/50 backdrop-blur-sm border border-primary/20 mb-4 animate-pulse-glow">
-                    <Icon className={`h-8 w-8 ${stat.color}`} />
-                  </div>
-                  <div className={`text-3xl font-bold ${stat.color} mb-2`}>
-                    {stat.value}
-                  </div>
-                  <div className="text-muted-foreground font-medium">
-                    {stat.label}
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
 
       {/* Benefits Section */}
       <section className="py-20">
