@@ -1,11 +1,14 @@
 import { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Zap } from 'lucide-react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Menu, X, Zap, LogOut } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { useAuth } from '@/hooks/useAuth';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
+  const { user, signOut } = useAuth();
 
   const navItems = [
     { name: 'Home', href: '/' },
@@ -56,12 +59,25 @@ const Navigation = () => {
 
           {/* CTA Buttons */}
           <div className="hidden md:flex items-center space-x-4">
-            <Button variant="outline" className="btn-secondary">
-              Log In
-            </Button>
-            <Button className="btn-hero">
-              Start Saving
-            </Button>
+            {user ? (
+              <>
+                <Button variant="outline" className="btn-secondary" onClick={() => navigate('/dashboard')}>
+                  Dashboard
+                </Button>
+                <Button className="btn-hero" onClick={async () => { await signOut(); navigate('/'); }}>
+                  <LogOut className="mr-1 h-4 w-4" /> Sign Out
+                </Button>
+              </>
+            ) : (
+              <>
+                <Button variant="outline" className="btn-secondary" onClick={() => navigate('/auth')}>
+                  Log In
+                </Button>
+                <Button className="btn-hero" onClick={() => navigate('/auth')}>
+                  Start Saving
+                </Button>
+              </>
+            )}
           </div>
 
           {/* Mobile menu button */}
@@ -101,12 +117,25 @@ const Navigation = () => {
               </Link>
             ))}
             <div className="pt-4 space-y-2">
-              <Button variant="outline" className="w-full btn-secondary">
-                Log In
-              </Button>
-              <Button className="w-full btn-hero">
-                Start Saving
-              </Button>
+              {user ? (
+                <>
+                  <Button variant="outline" className="w-full btn-secondary" onClick={() => { setIsOpen(false); navigate('/dashboard'); }}>
+                    Dashboard
+                  </Button>
+                  <Button className="w-full btn-hero" onClick={async () => { setIsOpen(false); await signOut(); navigate('/'); }}>
+                    Sign Out
+                  </Button>
+                </>
+              ) : (
+                <>
+                  <Button variant="outline" className="w-full btn-secondary" onClick={() => { setIsOpen(false); navigate('/auth'); }}>
+                    Log In
+                  </Button>
+                  <Button className="w-full btn-hero" onClick={() => { setIsOpen(false); navigate('/auth'); }}>
+                    Start Saving
+                  </Button>
+                </>
+              )}
             </div>
           </div>
         </div>
