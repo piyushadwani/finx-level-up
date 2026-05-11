@@ -1,9 +1,13 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { ArrowRight, Zap } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { useAuth } from '@/hooks/useAuth';
 import heroImage from '@/assets/hero-finx.jpg';
 
 const Home = () => {
+  const { user } = useAuth();
+  const ctaTo = user ? '/dashboard' : '/auth';
 
   const benefits = [
     {
@@ -82,12 +86,14 @@ const Home = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button size="lg" className="btn-hero group">
-                Start Saving Now
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              <Button size="lg" className="btn-hero group" asChild>
+                <Link to={ctaTo}>
+                  {user ? 'Go to Dashboard' : 'Start Saving Now'}
+                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                </Link>
               </Button>
-              <Button size="lg" variant="outline" className="btn-secondary">
-                Download the App
+              <Button size="lg" variant="outline" className="btn-secondary" asChild>
+                <Link to="/demo">View Demo</Link>
               </Button>
             </div>
 
@@ -156,12 +162,14 @@ const Home = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="btn-hero group">
-              Get Started Free
-              <Zap className="ml-2 h-5 w-5 group-hover:rotate-12 transition-transform" />
+            <Button size="lg" className="btn-hero group" asChild>
+              <Link to={ctaTo}>
+                {user ? 'Open Dashboard' : 'Get Started Free'}
+                <Zap className="ml-2 h-5 w-5 group-hover:rotate-12 transition-transform" />
+              </Link>
             </Button>
-            <Button size="lg" variant="outline" className="btn-secondary">
-              Watch Demo
+            <Button size="lg" variant="outline" className="btn-secondary" asChild>
+              <Link to="/demo">Watch Demo</Link>
             </Button>
           </div>
         </div>
