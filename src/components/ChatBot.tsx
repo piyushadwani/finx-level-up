@@ -82,7 +82,7 @@ const ChatBot = () => {
       </button>
 
       {open && (
-        <Card className="fixed bottom-24 right-6 z-50 w-[90vw] max-w-sm h-[500px] flex flex-col game-card overflow-hidden">
+        <Card className="fixed bottom-24 right-6 z-50 w-[92vw] max-w-md h-[600px] flex flex-col game-card overflow-hidden">
           <div className="p-4 border-b border-border flex items-center gap-2 bg-gradient-to-r from-primary/10 to-accent/10">
             <Sparkles className="h-5 w-5 text-primary" />
             <div>
@@ -101,13 +101,15 @@ const ChatBot = () => {
             {user && messages.map((m, i) => (
               <div key={i} className={`flex ${m.role === 'user' ? 'justify-end' : 'justify-start'}`}>
                 <div
-                  className={`max-w-[85%] rounded-2xl px-3 py-2 text-sm whitespace-pre-wrap ${
+                  className={`max-w-[90%] rounded-2xl px-3 py-2 text-sm ${
                     m.role === 'user'
-                      ? 'bg-primary text-primary-foreground'
-                      : 'bg-muted text-foreground'
+                      ? 'bg-primary text-primary-foreground whitespace-pre-wrap'
+                      : 'bg-muted text-foreground prose prose-sm dark:prose-invert max-w-none prose-table:text-xs prose-th:px-2 prose-td:px-2 prose-headings:mt-2 prose-headings:mb-1 prose-p:my-1 prose-ul:my-1 prose-ol:my-1'
                   }`}
                 >
-                  {m.content}
+                  {m.role === 'user' ? m.content : (
+                    <ReactMarkdown remarkPlugins={[remarkGfm]}>{m.content}</ReactMarkdown>
+                  )}
                 </div>
               </div>
             ))}
