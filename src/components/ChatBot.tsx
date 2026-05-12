@@ -7,6 +7,8 @@ import { Card } from '@/components/ui/card';
 import { MessageCircle, X, Send, Sparkles } from 'lucide-react';
 import { toast } from 'sonner';
 import { Link } from 'react-router-dom';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 
 interface Msg { role: 'user' | 'assistant'; content: string; }
 
